@@ -1,0 +1,26 @@
+@font-face {
+    font-family: "Kumbh4";
+    src: url(../fonts/KumbhSans-Regular.ttf);
+}
+@font-face {
+    font-family: "Kumbh7";
+    src: url(../fonts/KumbhSans-Bold.ttf);
+}
+$font1: Kumbh4, sans-serif;
+$font2: Kumbh7, sans-serif;
+$bar: hsl(240, 5%, 91%);
+$span: hsl(240, 6%, 50%);
+$dark: hsl(237, 12%, 33%);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+}
+p {
+    font-family: $font1;
+    color: $dark;
+}

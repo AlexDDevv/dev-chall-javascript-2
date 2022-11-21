@@ -1,0 +1,169 @@
+.container {
+    background: white;
+    width: 70%;
+    height: 550px;
+    margin: 80px auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px 5px rgba(0, 0, 0, 0.2);
+
+    @media screen and (max-width: 1100px) {
+        grid-template-columns: 1fr;
+        width: 90%;
+        
+    }
+
+    .left-part {
+        width: 90%;
+        background: url(../images/bg-pattern-desktop.svg) right;
+        position: relative;
+
+        .illustration {
+            position: absolute;
+            top: 50%;
+            left: 35%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+
+            @media screen and (max-width: 1100px) {
+                width: 60%;
+                top: -40%;
+                left: 55%;
+                transform: translate(-50%, -50%);
+            }
+            
+            img {
+                width: 100%;
+            }
+        }
+        .box {
+            position: absolute;
+            top: 59%;
+            left: 0;
+            transform: translate(-50%, -50%);
+
+            @media screen and (max-width: 1100px) {
+                left: 35%;
+                top: 85%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+    .right-part {
+        padding: 80px 100px 80px 0;
+
+        @media screen and (max-width: 1230px) {
+            padding-right: 50px;
+        }
+        @media screen and (max-width: 1100px) {
+            padding-left: 50px;
+            padding-bottom: 0;
+        }
+        @media screen and (max-width: 620px) {
+            padding: 0 25px 0 25px;
+            margin-top: 100px;
+        }
+
+        .faq {
+            width: 90%;
+            margin: 0 auto;
+
+            @media screen and (max-width: 620px) {
+                width: 100%;
+            }
+            
+            h1 {
+                font-family: $font2;
+                color: hsl(238, 29%, 16%);
+                margin-bottom: 40px;
+
+                @media screen and (max-width: 1100px) {
+                    text-align: center;
+                }
+            }
+            .question {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding-bottom: 15px;
+                border-bottom: 1px solid $bar;
+                margin-bottom: 15px;
+                cursor: pointer;
+
+                p {
+
+                    @media screen and (max-width: 520px) {
+                        font-size: 0.9rem;
+                    }
+
+                    &:hover {
+                        color: hsl(14, 88%, 65%);
+                        transition: 0.2s;
+                    }
+                }
+            }
+            .accordion {
+                position: relative;
+                border-bottom: 1px solid $bar;
+                margin-bottom: 15px;
+
+                &.active {
+                    
+                    .content {
+                        height: 56px;
+                        transition: 0.5s;
+                    }
+                    img {
+                        rotate: 180deg;
+                        transition: 0.5s;
+                    }
+                }
+
+                .label {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-bottom: 20px;
+                    cursor: pointer;
+                    position: relative;
+    
+                    p {
+                        font-family: $font2;
+                        color: hsl(238, 29%, 16%);
+
+                        @media screen and (max-width: 520px) {
+                            font-size: 0.9rem;
+                        }
+                    }
+                    img {
+                        transition: 0.5s;
+                    }
+                }
+                .content {
+                    position: relative;
+                    height: 0;
+                    overflow: hidden;
+                    transition: 0.5s;
+                    text-align: justify;
+                    cursor: pointer;
+                    width: 95%;
+
+                    @media screen and (max-width: 760px) {
+                        width: 90%;
+                    }
+    
+                    p {
+                        color: $span;
+                        font-size: 0.85rem;
+                        line-height: 20px;
+
+                        @media screen and (max-width: 520px) {
+                            font-size: 0.8rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
